@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	*,
+	*::after,
+	*::before {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		box-sizing: inherit;
+		font-size: 62.5%;
+	}
+
+	body {
+		font-family: 'Quicksand', sans-serif;
+		background: #1d2123;
+	}
+
+	input {
+		background: transparent;
+		font-size: 1.2rem;
+		font-family: inherit;
+		outline: none;
+		border: none;
+		color: grey;
+		transition: width 2s ease-in;
+	}
+
+	input:hover,
+	input:focus {
+		border-bottom: 1px solid grey;
+	}
+}
+
+@layer components {
+	.input-wrapper {
+		padding: 1rem 3rem;
+	}
+
+	.playlist-card {
+		border-radius: 3rem;
+	}
+
+	.avatars:not(first-child) {
+		margin-left: -2rem;
+	}
+
+	.collection-card {
+		height: 23rem;
+		width: 20rem;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+}
