@@ -6,7 +6,7 @@ type CollectionCardProps = {
 }
 
 const gradient: string =
-	'linear-gradient(90deg, rgba(2,0,36,0.38139005602240894) 0%, rgba(3,3,22,0.6334908963585435) 35%, rgba(0,28,33,0.34217436974789917) 100%)'
+	'linear-gradient(to bottom, rgba(255,255,255,0.6138830532212884) 3%, rgba(15,18,19,0.8567401960784313) 85%, rgba(0,0,0,0.6082808123249299) 0%)'
 
 const CollectionCard = ({ album }: CollectionCardProps) => {
 	return (
@@ -15,7 +15,7 @@ const CollectionCard = ({ album }: CollectionCardProps) => {
 				<div
 					className='collection-card rounded-3xl p-8 flex flex-col justify-end gap-2 mb-8'
 					style={{
-						backgroundImage: `${gradient},url(${item.image})`,
+						backgroundImage: `${gradient}, url(${item.image})`,
 					}}
 				>
 					<p className='text-3xl text-white'>{item.title}</p>

@@ -4,8 +4,16 @@ import Header from './Header/Header'
 import Inputfield from './Inputfield/Inputfield'
 import Player from './Player/Player'
 
-const Layout = ({ children, title = 'La Musica' }: LayoutProps) => (
-	<>
+const Layout = ({
+	children,
+	title = 'La Musica',
+	backgroundColor,
+	backgroundImage,
+}: LayoutProps) => (
+	<div
+		className={`${backgroundColor} bg-no-repeat bg-cover bg-center`}
+		style={{ backgroundImage: `${backgroundImage}` }}
+	>
 		<Head>
 			<title>{title}</title>
 			<meta charSet='utf-8' />
@@ -14,7 +22,7 @@ const Layout = ({ children, title = 'La Musica' }: LayoutProps) => (
 		</Head>
 		<div className='flex items-start p-8'>
 			<Header />
-			<main className='w-full px-12 pb-8'>
+			<main className='w-full pl-4 sm:pl-12 pr-4 sm:pr-20 md:pr-32 pb-8'>
 				<Inputfield />
 				{children}
 			</main>
@@ -22,7 +30,7 @@ const Layout = ({ children, title = 'La Musica' }: LayoutProps) => (
 		<footer className='fixed w-full bottom-0'>
 			<Player />
 		</footer>
-	</>
+	</div>
 )
 
 export default Layout

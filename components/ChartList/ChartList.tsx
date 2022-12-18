@@ -11,7 +11,7 @@ const ChartList = ({ chartData }: ChartListProps) => {
 		<>
 			{chartData.map((item) => (
 				<div
-					className='rounded-3xl bg-slate-900 p-6 flex justify-between items-center w-full text-white m-8'
+					className='rounded-3xl bg-primary-300 p-6 flex justify-between items-center w-full text-white m-8'
 					key={item.id}
 				>
 					<div className='sm:flex gap-4 items-center'>
@@ -22,7 +22,7 @@ const ChartList = ({ chartData }: ChartListProps) => {
 							<p className='text-xl'>{item.duration}</p>
 						</div>
 					</div>
-					<div className='rounded-full border-2 border-orange-900 p-2'>
+					<div className='rounded-full border-2 border-light-300 p-2'>
 						<HeartOutlineIcon />
 					</div>
 				</div>

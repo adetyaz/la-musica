@@ -19,6 +19,20 @@
 	body {
 		font-family: 'Quicksand', sans-serif;
 		background: #1d2123;
+		overflow-x: hidden;
+	}
+
+	body::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: rgba(52, 63, 65, 0.44861694677871145);
+		border-radius: 0.5rem;
 	}
 
 	input {
@@ -56,5 +70,9 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
+	}
+
+	.collection-button {
+		@apply bg-light-300 opacity-60 rounded-full p-6 flex gap-2;
 	}
 }

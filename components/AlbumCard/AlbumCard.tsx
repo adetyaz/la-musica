@@ -8,7 +8,7 @@ const AlbumCard = ({ album }: AlbumCardProps) => {
 	return (
 		<>
 			{album.map((item) => (
-				<div className='p-4 text-gray-400'>
+				<div className='p-4 text-gray-400 snap-start' key={item.id}>
 					<img
 						src={item.image}
 						alt='album cover'

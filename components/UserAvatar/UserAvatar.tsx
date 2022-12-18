@@ -1,10 +1,9 @@
 type UserAvatarProps = {
 	image?: string
-	key?: string
 }
 
-const UserAvatar = ({ image, key }: UserAvatarProps) => {
-	return <img src={image} alt='user avatar' key={key} className='avatars' />
+const UserAvatar = ({ image }: UserAvatarProps) => {
+	return <img src={image} alt='user avatar' className='avatars' />
 }
 
 export default UserAvatar

@@ -5,9 +5,12 @@ import { songData } from '../../utils/song-data'
 
 type AlbumPageProps = {}
 
+const gradient: string =
+	'linear-gradient(to bottom, rgba(0,0,0,0.6811099439775911) 0%, rgba(0,0,0,1) 100%)'
+
 const Album = ({}: AlbumPageProps) => {
 	return (
-		<Layout>
+		<Layout backgroundImage={`${gradient}, url('/images/png/album.png')`}>
 			<div className='pt-10 flex gap-8 items-center'>
 				<img src='/images/png/album.png' alt='album art' />
 				<div className='flex flex-col gap-6  text-white'>
@@ -20,15 +23,15 @@ const Album = ({}: AlbumPageProps) => {
 						<span>64 songs </span>~<span> 16 hrs+</span>
 					</p>
 					<div className='flex gap-4 mt-1'>
-						<div className='bg-zinc-800 opacity-60 rounded-full p-6  flex gap-2'>
+						<div className='collection-button'>
 							<PlayIcon />
 							Play all
 						</div>
-						<div className='bg-zinc-800 opacity-60 rounded-full p-6 flex gap-2'>
+						<div className='collection-button'>
 							<CollectionIcon />
 							Add to collection
 						</div>
-						<div className='bg-zinc-800 opacity-60 rounded-full p-6 w-max'>
+						<div className='collection-button block w-max'>
 							<RedHeartIcon />
 						</div>
 					</div>

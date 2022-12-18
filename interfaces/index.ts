@@ -13,6 +13,8 @@ export type User = {
 export type LayoutProps = {
 	children?: ReactNode
 	title?: string
+	backgroundColor?: string
+	backgroundImage?: string
 }
 
 export type IconProps = {
@@ -32,6 +34,7 @@ export type Avatars = {
 }
 
 export type Album = {
+	id?: number | string
 	artist?: string
 	title?: string
 	image?: string
@@ -39,7 +42,7 @@ export type Album = {
 
 export type Song = {
 	image?: string
-	title?: string
+	title?: string | any
 	artist?: string
 	album?: string
 	duration?: string
